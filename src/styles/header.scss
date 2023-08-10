@@ -1,0 +1,71 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+header {
+    background-color: $black;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    padding: $margin20 0;
+    img {
+        max-width: 4%;
+        @media (max-width: $breackPoint_sm) {
+            max-width: 10%;
+        }
+    }
+    &__nav {
+        @media (max-width: $breackPoint_sm) {
+            position: absolute;
+            margin-right: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50vh;
+            z-index: 1000;
+            padding: $margin60 $margin30;
+            background-color: $black;
+            overflow-y: auto;
+            visibility: hidden;
+            transform: translateY(-120%);
+            @include transition(all);
+        }
+        ul {
+            gap: $margin40;
+            @media (max-width: $breackPoint_sm) {
+                flex-direction: column;
+                gap: $margin20;
+            }
+            li {
+                a {
+                    color: $white;
+                    border-bottom: 1px solid transparent;
+                    @include font (400, 20px, 145%);
+                    @include transition (all);
+                    @media (max-width: $breackPoint_sm) {
+                        display: block;
+                    }
+                    &:focus-visible {
+                        outline: none;
+                        color: $orange;
+                    }
+                    &:hover {
+                        border-bottom: 2px solid $yellow;
+                    }
+                    &:active {
+                        color: $yellow;     
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-nav--active {
+    visibility: visible;
+    transform: none;
+    @include transition (all);
+}

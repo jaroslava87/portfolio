@@ -1,0 +1,181 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.stop-scroll {
+overflow: hidden;
+}
+
+.works__container-cart1-descr {
+    &--active {
+        display: block;
+        transform: none;
+    }
+}
+
+.works__container-cart2-descr {
+    &--active {
+        display: block;
+        transform: none;
+    }
+}
+
+.works__container-cart3-descr {
+    &--active {
+        display: block;
+        transform: none;
+    }
+}
+
+.works__container-cart4-descr {
+    &--active {
+        display: block;
+        transform: none;
+    }
+}
+
+
+.works__container-cart-descr {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    visibility: hidden;
+    background-color: rgb(rgb(255, 255, 255), 0.7);
+    padding: $margin10;
+    @include transition (all);
+    @media (max-width: $breackPoint_sm) {
+        padding: 5px;
+        top: 15px;
+    }
+    &-content {
+        border: 1px solid $gray;
+        padding: $margin10 ;
+        @media (max-width: $breackPoint_sm) {
+            padding: 5px;
+        }
+        &-btn {
+            display: inline-block;
+            border: 2px solid transparent;
+            background-color: transparent;
+            cursor: pointer;
+            position: absolute;
+            right: 12px;
+            top: 16px;
+            &:focus-visible {
+                outline: none;
+                border: 2px solid $yellow;
+            }
+            @include transition(all);
+            @media (max-width: $breackPoint_sm) {
+                display: none;
+            }
+            svg {
+                circle {
+                    &:hover {
+                        fill: $orange;
+                        stroke: $orange;
+                    }
+                    &:active {
+                        fill: $black;
+                        stroke: $black;     
+                    }
+                    @include transition (all);
+                }
+            }
+        }
+        h3 {
+            @include font (600, 18px, 125%);
+            text-align: center;
+            @media (max-width: $breackPoint_xxl) {
+                font-size: 16px;
+            }
+            @media (max-width: $breackPoint_xl) {
+                font-size: 12px;
+            }
+            @media (max-width: $breackPoint_md) {
+                font-size: 16px;
+            }
+            @media (max-width: $breackPoint_sm) {
+                font-size: 9px;
+            }
+        }
+        ul {
+            flex-direction: column;
+            padding: $margin20 0;
+            gap: $margin10;
+            @media (max-width: $breackPoint_sm) {
+                gap: 5px;
+                padding: 7px 0;
+            }
+            li {
+                @include font (400, 18px, 125%);
+                @media (max-width: $breackPoint_xxl) {
+                    font-size: 15px;
+                }
+                @media (max-width: $breackPoint_xxl) {
+                    font-size: 12px;
+                }
+                @media (max-width: $breackPoint_md) {
+                    font-size: 15px;
+                }
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 9px;
+                }
+            }
+        }
+        p {
+            @include font (400, 14px, 125%);
+            color: $gray;
+            @media (max-width: $breackPoint_xxl) {
+                font-size: 13px;
+            }
+            @media (max-width: $breackPoint_xl) {
+                font-size: 10px;
+            }
+            @media (max-width: $breackPoint_sm) {
+                font-size: 8px;
+            }
+        }
+    }
+   
+}
+
+.works__container-cart1-descr {
+    &--active {
+        visibility: visible;
+        transform: translateY(16px);
+        @include transition(all);
+        transition-duration: 1s;
+
+    }
+}
+
+.works__container-cart2-descr {
+    &--active {
+        visibility: visible;
+        transform: translateY(16px);
+        @include transition(all);
+        transition-duration: 1s;
+    }
+}
+
+.works__container-cart3-descr {
+    &--active {
+        visibility: visible;
+        transform: translateY(16px);
+        @include transition(all);
+        transition-duration: 1s;
+    }
+}
+
+.works__container-cart4-descr {
+    &--active {
+        visibility: visible;
+        transform: translateY(16px);
+        @include transition(all);
+        transition-duration: 1s;
+    }
+}
+
+

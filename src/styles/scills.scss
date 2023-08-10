@@ -1,0 +1,256 @@
+.scills {
+    background-color: $light-gray;
+    &__container {
+        justify-content: space-between;
+        @media (max-width: $breackPoint_sm) {
+            flex-direction: column;
+        }
+        &-left {
+            padding-top: $margin30;
+            padding-bottom: $margin20;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60%;
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+            }
+            @media (max-width: $breackPoint_sm){ 
+                padding-top: $margin20;
+                padding-bottom: 0;
+                flex-direction: column-reverse;
+            }
+            &-top {
+                &-title {
+                    justify-content: center;
+                }
+                ul {
+                    padding: $margin20 0;
+                    flex-direction: column;
+                    gap: 5px;
+                    li {
+                        @include font (400, 20px, 145%);
+                        color: $gray;
+                        @media (max-width: $breackPoint_sm) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &-bottom {
+                &-title {
+                    justify-content: center;
+                    margin-bottom: $margin30;
+                    @media (max-width: $breackPoint_sm) {
+                        margin-bottom: $margin10;
+                    }
+                }
+                &-content {
+                    row-gap: $margin10;
+                    grid-template-areas:
+                    "cart1 cart2 cart4 cart3"
+                    "text1 text2  text4 text3";
+                    @media (max-width: $breackPoint_sm){
+                        grid-template-areas:
+                            "cart1 cart3"
+                            "text1 text3"
+                            "cart2 cart4"
+                            "text2 text4";
+                    }
+                    &-cart1 {
+                        padding-top: 120px;
+                        background-image: url(../img/css.webp);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        grid-area: cart1;
+                        @include transition (scale);
+                        &:hover {
+                            scale: 1.1;
+                        }
+                        @media (max-width: $breackPoint_md){ 
+                            padding-top: 80px;
+                        }
+                        @media (max-width: $breackPoint_sm){ 
+                            padding-top: 100px;
+                        }
+                    }
+                    &-text1 {
+                        grid-area: text1;
+                    }
+                    &-cart2 {
+                        padding-top: 120px;
+                        background-image: url(../img/html.webp);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        grid-area: cart2;
+                        @include transition (scale);
+                        &:hover {
+                            scale: 1.1;
+                        }
+                        @media (max-width: $breackPoint_md){ 
+                            padding-top: 80px;
+                        }
+                        @media (max-width: $breackPoint_sm){ 
+                            padding-top: 100px;
+                        }
+                    }
+                    &-text2 {
+                        grid-area: text2;
+                    }
+                    &-cart3 {
+                        padding-top: 120px;
+                        background-image: url(../img/sass.webp);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        grid-area: cart3;
+                        @include transition (scale);
+                        &:hover {
+                            scale: 1.1;
+                        }
+                        @media (max-width: $breackPoint_md){ 
+                            padding-top: 80px;
+                        }
+                        @media (max-width: $breackPoint_sm){ 
+                            padding-top: 100px;
+                        }
+                    }
+                    &-text3 {
+                        grid-area: text3;
+                    }
+                    &-cart4 {
+                        padding-top: 120px;
+                        background-image: url(../img/js.webp);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        grid-area: cart4;
+                        @include transition (scale);
+                        &:hover {
+                            scale: 1.1;
+                        }
+                        @media (max-width: $breackPoint_md){ 
+                            padding-top: 80px;
+                        }
+                        @media (max-width: $breackPoint_sm){ 
+                            padding-top: 100px;
+                        }
+                    } 
+                    &-text4 {
+                        grid-area: text4;
+                    }
+                }
+            }
+        }
+        &-right {
+            width: 39%; 
+            padding-top: $margin30;
+            padding-bottom: $margin20;
+            @media (max-width: $breackPoint_sm) {
+                padding-top: 0;
+                padding-bottom: 0;
+                width: 100%;
+            }
+            &-title {
+                justify-content: center;
+                margin-bottom: $margin30; 
+                @media (max-width: $breackPoint_sm) {
+                    margin-bottom: $margin10;
+                }
+            }
+            &-content {
+                row-gap: $margin10;
+                grid-template-areas:
+                    "cart1 cart2 cart3"
+                    "text1 text2 text3"
+                    "cart4 cart5 cart6"
+                    "text4 text5 text6"
+                    "cart7 cart8 cart9"
+                    "text7 text8 text9"
+                    "cart11 cart10 cart12"
+                    "text11 text10 text12";
+                    @media (max-width: $breackPoint_sm) {
+                        grid-template-areas:
+                            "cart1 cart2 cart3 cart4"
+                            "text1 text2 text3 text4"
+                            "cart5 cart6 cart7 cart8"
+                            "text5 text6 text7 text8"
+                            "cart9 cart10 cart11 cart12"
+                            "text9 text10 text11 text12";
+                    }
+                    &-cart1 {
+                        grid-area: cart1;
+                        background-image: url(../img/vscode.webp);
+                    }
+                    &-text1 {
+                        grid-area: text1;
+                    }
+                    &-cart2 {
+                        grid-area: cart2;
+                        background-image: url(../img/git\ hab.webp);
+                    }
+                    &-text2 {
+                        grid-area: text2;
+                    }
+                    &-cart3 {
+                        grid-area: cart3;
+                        background-image: url(../img/bootstrap.webp);
+                    }
+                    &-text3 {
+                        grid-area: text3;
+                    }
+                    &-cart4 {
+                        grid-area: cart4;
+                        background-image: url(../img/photoshop.webp);
+                    }
+                    &-text4 {
+                        grid-area: text4;
+                    }
+                    &-cart5 {
+                        grid-area: cart5;
+                        background-image: url(../img/vue.webp);
+                    }
+                    &-text5 {
+                        grid-area: text5;
+                    }
+                    &-cart6 {
+                        grid-area: cart6;
+                        background-image: url(../img/svg.webp);
+                    }
+                    &-text6 {
+                        grid-area: text6;
+                    }
+                    &-cart7 {
+                        grid-area: cart7;
+                        background-image: url(../img/figma.webp);
+                    }
+                    &-text7 {
+                        grid-area: text7;
+                    }
+                    &-cart8 {
+                        grid-area: cart8;
+                        background-image: url(../img/node.webp);
+                    }
+                    &-text8 {
+                        grid-area: text8;
+                    }
+                    &-cart9 {
+                        grid-area: cart9;
+                        background-image: url(../img/webpack.webp);
+                    }
+                    &-text9 {
+                        grid-area: text9;
+                    }
+                    &-cart10 {
+                        grid-area: cart10;
+                        background-image: url(../img/gulp.webp);
+                    }
+                    &-text10 {
+                        grid-area: text10;
+                    }
+                    
+            }
+        }
+    }
+}

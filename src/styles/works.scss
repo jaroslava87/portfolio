@@ -1,0 +1,91 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.works {
+    &__title {
+        padding: $margin20 0;
+        @media (max-width: $breackPoint_sm) {
+            padding: $margin10 0;
+        }
+        h1 {
+            @include font (600, 27px, 145%);
+            @media (max-width: $breackPoint_md) {
+                font-size: 20px;
+            }
+        }
+    }
+    &__container {
+        gap: $margin20;
+        grid-template-areas: 
+        "cart1 cart3 cart2 cart4";
+        padding-bottom: $margin30;
+        @media (max-width: $breackPoint_md) {
+            grid-template-areas: 
+            "cart1 cart2" 
+            "cart3 cart4";
+            padding-bottom: $margin20;
+        }
+        @media (max-width: $breackPoint_sm) {
+            gap: $margin10;
+        }
+        
+        &-cart1 {
+            grid-area: cart1;
+            flex-direction: column;
+            position: relative;
+            a {
+                flex-direction: column;
+                &:focus-visible {
+                    outline: none;
+                }
+                img {
+                    margin-bottom: $margin10;
+                }
+            }
+        }
+        &-cart2 {
+            grid-area: cart2;
+            flex-direction: column;
+            position: relative;
+            a {
+                flex-direction: column;
+                &:focus-visible {
+                    outline: none;
+                }
+                img {
+                    margin-bottom: $margin10;
+                }
+            }
+        }
+        &-cart3 {
+            grid-area: cart3;
+            flex-direction: column; 
+            position: relative;
+            a {
+                flex-direction: column;
+                &:focus-visible {
+                    outline: none;
+                }
+                img {
+                    margin-bottom: $margin10;
+                }
+            }
+        }
+        &-cart4 {
+            grid-area: cart4;
+            flex-direction: column;
+            position: relative;
+            a {
+                flex-direction: column;
+                &:focus-visible {
+                    outline: none;
+                }
+                img {
+                    margin-bottom: $margin10;
+                }
+            }
+        }
+    }
+}

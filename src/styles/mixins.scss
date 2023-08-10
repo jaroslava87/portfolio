@@ -1,0 +1,47 @@
+@mixin font($weight, $size, $line) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+}
+
+@mixin hover {
+    &:hover {
+        color: $beuge;
+        border-color: $beuge;
+    }
+}
+
+@mixin focus {
+    &:focus-visible {
+        color: $light-brown;
+        outline: none;
+    }
+}
+
+@mixin active {
+    &:active {
+        color: $orange;
+    }
+}
+
+@mixin hover-block {
+    &:hover {
+        transform: scaleY(1.1);  
+    }
+}
+
+@mixin active-block {
+    &:active {
+        border-color: $orange;
+    }
+}
+
+
+@mixin transition($property) {
+    transition-property: $property;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+
+

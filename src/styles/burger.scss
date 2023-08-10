@@ -1,0 +1,78 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.burger {
+visibility: hidden;
+border: none;
+background-color: transparent;
+cursor: pointer;
+@include transition (scale);
+&:focus-visible {
+  outline: none;
+  scale: 1.2;
+}
+&:hover {
+  scale: 1.1;
+}
+&:active {
+  scale: 1.2;    
+}
+@media (max-width: $breackPoint_sm) {
+    visibility: visible;
+    z-index: 1005;
+    position: relative;
+    width: 21px;
+    height: 12px;
+    &__line {
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        background-color: $white;
+        left: 50%;
+        transform: translateX(-50%);
+        @include transition (transform);
+    &:nth-child(1) {
+        top: 12px;
+    }
+    &:nth-child(3) {
+        bottom: 12px;
+    }
+    &:nth-child(2) {
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    }
+  }
+}
+
+  .burger--active
+  .burger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger--active
+  .burger__line:first-child {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-17px) rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .burger--active
+  .burger__line:last-child {
+    bottom: auto;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-17px) rotate(-45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .stop-scroll {
+    overflow: hidden;
+  }
+
+  

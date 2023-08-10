@@ -1,0 +1,114 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+footer {
+    background-color: $black;
+}
+
+.footer {
+    &__container {
+        padding: $margin20 0;
+        @media (max-width: $breackPoint_sm) {
+            flex-direction: column;
+        }
+        &-content {
+            width: 49%;
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+            }
+           h2 {
+            font-size: 24px;
+            color: $white;
+            @media (max-width: $breackPoint_sm) {
+                font-size: 20px;
+            }
+            }
+           ul {
+            flex-direction: column;
+            gap: $margin20;
+            padding: $margin20 0;
+            li {
+                a {
+                    position: relative;
+                    padding: 5px;
+                    &:focus-visible {
+                        outline: 2px solid $orange;
+                    }
+                    p {
+                        display: inline-block;
+                        @include font(400, 20px, 145%);
+                        color: $yellow;
+                        padding-left: $margin40;
+                        padding-bottom: 2px;
+                        border-bottom: 2px solid transparent;
+                        &:hover {
+                            border-color: $yellow;
+                        }
+                        &:active {
+                            border-color: $light-gray;
+                            color: $light-gray;     
+                        }
+                        @include transition(all);
+                        @media (max-width: $breackPoint_sm) {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+           }
+        }
+        &-img {
+            width: 49%;
+            background-image: url(../img/footer_bgrnd.webp);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+                height: 200px;
+            }
+         }
+    }
+    &__link-gh {
+       img {
+            position: absolute;
+            width: 25px;
+        }
+    }
+    &__link-tg {
+        img {
+             position: absolute;
+             width: 25px;
+             top: $margin10;
+         }
+     }
+     &__link-mail {
+        img {
+             position: absolute;
+             width: 25px;
+             top: 7px;
+         }
+     }
+     &__link-tel {
+        img {
+             position: absolute;
+             width: 25px;
+         }
+     }
+     &__link-resume {
+        img {
+             position: absolute;
+             width: 25px;
+         }
+     }
+     &__bottom {
+        padding-bottom: $margin10;
+        justify-content: center;
+        p {
+            @include font (300, 12px, 145%);
+            color: $gray;
+        }
+     }
+}

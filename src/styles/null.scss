@@ -1,0 +1,157 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: $white;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+   ul, li, a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+   }
+
+  .butten-reset {
+    display: inline-block;
+    padding: $margin10 ;
+    margin: 0;
+    border: 2px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    @include font (400, 16px, 125%);
+    font-family: 'Jost', sans-serif;
+    @media (max-width: $breackPoint_sm) {
+      font-size: 11px;
+    }
+  }
+
+  .btn-top {
+    background: rgb(94, 94, 94) radial-gradient(circle at 60% 0, rgba(206, 206, 206, 0.65), rgba(118, 118, 118, 0.35));
+    color: $white;
+    @include transition (all);
+    &:focus-visible {
+      outline: none;
+      background: transparent;
+      border-color: $gray;
+      color: $gray;
+    }
+    &:hover {
+      background: rgb(48, 48, 48) radial-gradient(circle at 60% 0, rgba(173, 172, 172, 0.65), rgba(62, 62, 62, 0.35));
+    }
+    &:active {
+      background: rgb(14, 14, 14) radial-gradient(circle at 60% 0, rgba(104, 104, 104, 0.65), rgba(36, 36, 36, 0.35));  
+    }
+  }
+
+  .btn-bottom {
+    background: rgb(255, 208, 40) radial-gradient(circle at 50% 0, rgba(255, 242, 0, 0.65), rgba(251, 194, 71, 0.35));
+    color: $gray;
+    border-radius: 7px;
+    @include transition (all);
+    &:focus-visible {
+      outline: none;
+      background: transparent;
+      border-color: $orange;
+      color: $orange;
+    }
+    &:hover {
+      background: rgb(234, 187, 14) radial-gradient(circle at 50% 0, rgba(227, 216, 0, 0.65), rgba(196, 151, 55, 0.35));
+      color: $white;
+    }
+    &:active {
+      background: rgb(223, 151, 18) radial-gradient(circle at 50% 0, rgba(208, 198, 1, 0.65), rgba(151, 117, 42, 0.35));
+      color: $white;
+    }
+  }
+
+    h1, h2, h3, ul, p {
+    margin: 0;
+  }
+
+  h2 {
+    display:inline-block;
+    @include font(600, 22px, 145%);
+    border-bottom: 1px solid transparent;
+    @include transition (border-color);
+    &:hover {
+        border-color: $yellow;
+    }
+    @media (max-width: $breackPoint_md) {
+      font-size: 17px;
+    }
+  }
+
+  .text {
+    padding-bottom: $margin20;
+    justify-content: center;
+    @include font (300, 12px, 145%);
+    color: $gray;
+  }
+
+  .cart {
+    padding-top: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include transition (scale);
+    &:hover {
+        outline: none;
+        scale: 1.2;
+    }
+    @media (max-width: $breackPoint_md){ 
+        padding-top: 50px;
+    }
+    @media (max-width: $breackPoint_md){ 
+      padding-top: $margin40;
+  }
+  }
+
+  img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+    @media (max-width: $breackPoint_xxl) {
+      padding: 0 20px;
+    }
+    @media (max-width: $breackPoint_md) {
+      padding: 0 15px;
+    }
+    @media (max-width: $breackPoint_sm) {
+      padding: 0 10px;
+    }
+  }
+
+  
+  

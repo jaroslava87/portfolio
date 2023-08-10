@@ -1,0 +1,94 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+.hero {
+    &__container {
+        padding-top: $margin20;
+        padding-bottom: $margin20;
+        justify-content: space-between;
+        padding-top: $margin40;
+        padding-bottom: $margin40;
+        @media (max-width: $breackPoint_sm) {
+            flex-direction: column;
+            padding-top: $margin20;
+            padding-bottom: $margin20;
+        }
+        &-content {
+            flex-direction: column;
+            width: 49%;
+            @media (max-width: $breackPoint_md) {
+                width: 59%;
+            }
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+            }
+
+            h3 {
+                @include font (600, 22px, 145%);
+                margin-bottom: $margin20;
+                @media (max-width: $breackPoint_md) {
+                    font-size: 17px;
+                }
+                @media (max-width: $breackPoint_sm) {
+                    margin-bottom: $margin10;
+                }
+            }
+            ul {
+                flex-direction: column;
+                gap: $margin10;
+                margin-bottom:$margin10; 
+                @media (max-width: $breackPoint_sm) {
+                   gap: 3px;
+                }
+                li {
+                    @include font (400, 22px, 145%);
+                    @media (max-width: $breackPoint_sm) {
+                        font-size: 17px;
+                    }
+                }
+            }
+            p {
+                @include font (400, 16px, 145%);
+                color: $gray;
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 10px;
+                }
+                a {
+                    border-bottom: 1px solid $yellow;
+                    color: $yellow;
+                    @include transition (all);
+                    &:focus-visible {
+                        outline: none;
+                        color: $black;
+                        border-color: $black;
+                    }
+                    &:hover {
+                        color: $orange;
+                        border-color: $orange;
+                    }
+                    &:active {
+                        color: $gray;
+                        border-color: $gray;     
+                    }
+                }
+            }
+        }
+        &-img {
+            width: 49%;
+            background-image: url(../img/header_bgrnd-rev.webp);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            @media (max-width: $breackPoint_md) {
+                background-image: url(../img/header_bgrnd.webp);
+                width: 59%;
+            }
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+                height: 200px;
+            }
+            
+        }
+    }
+}
